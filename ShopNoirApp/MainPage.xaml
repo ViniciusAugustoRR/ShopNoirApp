@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopNoirApp.MainPage"
+             xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             
+             xmlns:Models="clr-namespace:ShopNoirApp.Models"
+             xmlns:ViewModels="clr-namespace:ShopNoirApp.ViewModels"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Flyout">
+
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#373435"/>
+    </Page.Behaviors>
+
+    <ContentPage.BindingContext>
+        <ViewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    
+    <ScrollView>
+        <VerticalStackLayout 
+            BackgroundColor="#FEFEFE">
+            <VerticalStackLayout Padding="7">
+                <Border
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0"
+                    StrokeShape="RoundRectangle 20, 20, 20, 20"
+                    StrokeThickness="0"
+                    HeightRequest="100"
+                    BackgroundColor="#373435">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <StackLayout
+                            Grid.Column="1"
+                            Grid.ColumnSpan="4"
+                            Orientation="Horizontal">
+
+                            <Label
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                Text="Seja bem-vinda, Iara!"
+                                FontFamily="SerratRegular"
+                                HorizontalTextAlignment="Center"
+                                TextColor="White"
+                                FontSize="Title"/>
+
+                        </StackLayout>
+
+                        <ImageButton
+                            Grid.Column="0"
+                            HeightRequest="200"
+                            WidthRequest="200"
+                            Aspect="AspectFill"
+                            Source="Resources/Images/menu_icon.png"
+                            Command="{Binding FlyoutCalled}"
+                            />
+
+                    </Grid>
+                </Border>
+
+                <Image
+                    BackgroundColor="#373435"
+                    Source="Resource/Images/noir101.png"/>
+
+                <StackLayout>
+
+                    <Label 
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Text="Ofertas da semana"
+                        FontSize="25"
+                        FontFamily="SerratBold"
+                        FontAttributes="Bold"
+                        TextColor="#373435"/>
+
+                    <CollectionView
+                        ItemsLayout="HorizontalList"
+                        ItemSizingStrategy="MeasureFirstItem"
+                        SelectionMode="Single"
+                        ItemsUpdatingScrollMode="KeepLastItemInView"
+                        SelectedItem="{Binding SelectedItem}"
+                        SelectionChangedCommand="{Binding ItemSelected}"
+                        x:Name="CVRoupas">
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="Models:DefaultItemCV">
+                                <StackLayout Orientation="Vertical" Padding="10">
+
+                                    <Border
+                                        StrokeThickness="0"
+                                        Padding="0"
+                                        StrokeShape="RoundRectangle 30, 30, 30,30"
+                                
+                                        HeightRequest="200"
+                                        WidthRequest="200">
+                                        <Image
+                                            Aspect="AspectFill"
+                                                Source="{Binding ImageURL}"/>
+                                    </Border>
+
+                                    <Label 
+                                        Margin="10"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="{Binding Title}"
+                                        TextColor="#373435"
+                                        FontFamily="SerratRegular"
+                                        FontSize="17"/>
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                                 Padding="30, 30, 30, 30">
+
+                    <Frame
+                            BorderColor="#373435"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            CornerRadius="100"
+                            Padding="0"
+                            VerticalOptions="CenterAndExpand">
+
+                        <Image
+                                Aspect="Fill"
+                                Source="Resource/Images/ls_dourado_shopnoir.png"/>
+
+                    </Frame>
+                    <VerticalStackLayout 
+                            Margin="5"
+                                    HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+
+                        <Label
+                                Margin="0, 10, 10, 20"
+                                HorizontalTextAlignment="Center"
+                                FontSize="22"
+                                Text="Quem Somos"
+                                FontFamily="SerratBold"
+                                TextColor="#373435"/>
+
+                        <Label
+                                Margin="0, 0, 10, 10"
+                                Text="Nascemos da vontade de fornecer roupas de qualidade por um preço acessível.
+                                Seja a sua melhor versão com a Shop Noir!"
+                                LineBreakMode="WordWrap"
+                                WidthRequest="190"
+                                MaxLines="7"
+                                TextColor="#373435"
+                                FontFamily="SerratRegular"
+                                FontSize="14"
+                                HorizontalTextAlignment="Center"/>
+
+                    </VerticalStackLayout>
+                </StackLayout>
+            </VerticalStackLayout>
+
+            <Grid
+                Padding="0"
+                Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackLayout
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    
+                    Orientation="Horizontal"
+                    Margin="0, 10, 0, 10"
+                    HeightRequest="180"
+                    BackgroundColor="#373435">
+
+
+
+                </StackLayout>
+
+                <Label 
+                    Grid.Column="0"
+                    
+                    Padding="30, 0, 0, 0"
+                    VerticalOptions="Center"
+                    Text="Nos siga no 
+                        Instagram!"
+                    FontSize="25"
+                    FontFamily="SerratBold"
+                    WidthRequest="200"
+                    TextColor="#FEFEFE"/>
+
+                <StackLayout
+                    Margin="30, 0, 0, 0"
+                    Padding="0, 0, 20, 0"
+                    WidthRequest="220"
+                    Grid.Column="1">
+                    <Image 
+                        Source="Resource/Images/hand_insta.png"/>
+                </StackLayout>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

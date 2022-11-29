@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShopNoirApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShopNoirApp"
+    xmlns:login="clr-namespace:ShopNoirApp.Pages.Login"
+    BackgroundColor="Transparent"
+    Background="Transparent"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="Transparent"
+    x:Name="Shell">
+
+    <Shell.FlyoutContent>
+        <Border
+            Padding="20"
+            Margin="0"
+            BackgroundColor="#373435"
+            StrokeShape="RoundRectangle 0, 30, 0, 30">
+            <VerticalStackLayout>
+                <Image
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="100"
+                    WidthRequest="250"
+                    Source="Resources/Images/lp_branco_shopnoir.png"
+                    />
+
+                <Line 
+                    BackgroundColor="#A18945"/>
+
+
+                <HorizontalStackLayout
+                    Margin="0, 10, 0, 0">
+                    <Image
+                        Margin="15"
+                        HeightRequest="45"
+                        WidthRequest="45"
+                        Source="Resource/Images/user_icon.png"/>
+
+                    <VerticalStackLayout
+                        Padding="5, 0, 0, 0"
+                        VerticalOptions="Center">
+                        <Label
+                            Text="Minha Conta"
+                            FontSize="22"
+                            FontFamily="SerratRegular"
+                            TextColor="#FEFEFE"/>
+                        <Label
+                            Padding="0, 10, 0, 0"
+                            Text="Ana Iara Araujo dos Santos"
+                            FontSize="12"
+                            FontFamily="SerratRegular"
+                            TextColor="#FEFEFE"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <CollectionView
+                    BindingContext="{x:Reference Shell}"
+                    IsGrouped="True"
+                    ItemsSource="{Binding FlyoutItems}">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout 
+                                Padding="20, 25, 0, 5"
+                                BackgroundColor="Transparent">
+                                <Label
+                                    Text="{Binding Title}"
+                                    FontSize="22"
+                                    FontFamily="SerratRegular"
+                                    MaximumWidthRequest="240"
+                                    TextColor="#FEFEFE"/>
+                                <Line
+                                    Margin="0, 0, 0, 0"
+                                    Background="#60595B"/>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <HorizontalStackLayout
+                    Padding="15, 50, 0, 0">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Sair">
+                        </TapGestureRecognizer>
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Image
+                        VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Source="Resources/Images/exit_icon.png"/>
+
+                    <Label
+                        VerticalOptions="Center"
+                        Text="Sair"
+                        FontFamily="SerratRegular"
+                        FontSize="22"
+                        TextColor="#FEFEFE"
+                        />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </Border>
+    </Shell.FlyoutContent>
+
+    <ShellContent
+        Title="Login"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate login:Login}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Home"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Vestidos"
+        Route="VestidosPage"/>
+    <ShellContent
+        Title="Saias"
+        Route="SaiasPage"/>
+    <ShellContent
+        Title="Blusas, croppeds e camisas"
+        Route="BlusasPage"/>
+    <ShellContent
+        Title="Shorts e calças"
+        Route="ShortsPage"/>
+    <ShellContent
+        Title="Blog Shop Noir"
+        Route="BlogPage"/>
+    <ShellContent
+        Title="Pedidos e Devoluções"
+        Route="PedidosPage"/>
+    
+</Shell>
