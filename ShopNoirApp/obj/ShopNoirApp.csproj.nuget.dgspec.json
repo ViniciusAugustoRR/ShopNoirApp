@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj": {}
+    "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj": {
+    "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
+        "projectUniqueName": "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
         "projectName": "ShopNoirApp",
-        "projectPath": "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
+        "projectPath": "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
         "packagesPath": "C:\\Users\\Vinicius Rios\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\obj\\",
+        "outputPath": "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

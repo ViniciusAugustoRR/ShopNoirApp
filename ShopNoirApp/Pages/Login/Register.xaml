@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopNoirApp.Pages.Login.Register"
+             xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             xmlns:viewmodels="clr-namespace:ShopNoirApp.ViewModels"
+             Shell.FlyoutBehavior="Disabled"
+             BackgroundColor="#373435"
+             Shell.NavBarIsVisible="False"
+             Title="Register">
+
+    <Page.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#373435"/>
+    </Page.Behaviors>
+
+    <ContentPage.BindingContext>
+        <viewmodels:RegistroViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+
+        <Image
+            Aspect="AspectFill"
+            Source="Resources/Images/bk_noir.png"
+            IsAnimationPlaying="True"/>
+
+        <StackLayout>
+            <VerticalStackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+
+                <StackLayout
+                        Margin="0, 0, 0, 50"
+                        Padding="10">
+                    <Image
+                        WidthRequest="250"
+                        Aspect="AspectFit"
+                        Source="Resources/Images/lp_dourado_shopnoir.png"/>
+                </StackLayout>
+
+                <StackLayout
+                        WidthRequest="350"
+                        Margin="0, 0, 0, 50">
+                    <Border
+                        Margin="0, 0, 0, 0"
+                        BackgroundColor="#FEFEFE"
+                        StrokeShape="RoundRectangle 10, 10, 10, 10"
+                        Padding="20, 10, 0, 5">
+                        <Entry
+                            BackgroundColor="#FEFEFE"
+                            Placeholder="Nome"
+                            TextColor="#373435"
+                            PlaceholderColor="#373435"/>
+                    </Border>
+                    <Border
+                        Margin="0, 15, 0, 0"
+                        BackgroundColor="#FEFEFE"
+                        StrokeShape="RoundRectangle 10, 10, 10, 10"
+                        Padding="20, 10, 0, 5">
+                        <Entry
+                            BackgroundColor="#FEFEFE"
+                            TextColor="#373435"
+                            Placeholder="E-mail"
+                            PlaceholderColor="#373435"/>
+                    </Border>
+                    <Border
+                            Margin="0, 15, 0, 0"
+                            BackgroundColor="#FEFEFE"
+                            StrokeShape="RoundRectangle 10, 10, 10, 10"
+                            Padding="20, 10, 0, 5">
+                        <Entry
+                            TextColor="#373435"
+                            BackgroundColor="#FEFEFE"
+                            Placeholder="Senha"
+                            PlaceholderColor="#373435"/>
+                    </Border>
+                    <Border
+                        Margin="0, 15, 0, 0"
+                        BackgroundColor="#FEFEFE"
+                        StrokeShape="RoundRectangle 10, 10, 10, 10"
+                        Padding="20, 10, 0, 5">
+                        <Entry
+                            TextColor="#373435"
+                            BackgroundColor="#FEFEFE"
+                            Placeholder="Confirmar Senha"
+                            PlaceholderColor="#373435"/>
+                    </Border>
+                   
+
+                    <Button
+                        Margin="0, 40, 0, 0"
+                        WidthRequest="200"
+                        HeightRequest="60"
+                        Text="Cadastrar"
+                        BackgroundColor="#373435"
+                        FontSize="Title"
+                        FontFamily="SerratRegular"
+                        TextColor="#A18945"
+                        CornerRadius="15"/>
+
+
+                </StackLayout>
+
+                <HorizontalStackLayout
+                    Margin="10"
+                    HorizontalOptions="Center">
+
+                    <Image
+                        Margin="20, 0, 40, 0"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Source="Resources/Images/facebook_icon.png"/>
+
+                    <Image
+                        Margin="40, 0, 20, 0"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Source="Resources/Images/instagram_icon.png"/>
+
+                </HorizontalStackLayout>
+
+                
+
+
+
+            </VerticalStackLayout>
+        </StackLayout>
+
+    </Grid>
+    
+</ContentPage>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Oxqv1ghRAldLfEhcwjHJ0J9RQ1pfNBFo7Bh84p8Ii+5zhL8egWek7o5LOMdLy1VFPiQQKMQN7LUsNxHO31ucjg==",
+  "dgSpecHash": "DJBe8DYUelnnUn7s8ITcIEwOMSry8yY8GvsX95aP/Vw/svK2oY6+QhF0yjy9E9K21ah8yXn2elG7v9ZrbEymtA==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
+  "projectFilePath": "D:\\Projetos\\ShopNoir\\ShopNoirApp\\ShopNoirApp\\ShopNoirApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vinicius Rios\\.nuget\\packages\\communitytoolkit.maui\\2.0.0\\communitytoolkit.maui.2.0.0.nupkg.sha512",
     "C:\\Users\\Vinicius Rios\\.nuget\\packages\\communitytoolkit.maui.core\\2.0.0\\communitytoolkit.maui.core.2.0.0.nupkg.sha512",

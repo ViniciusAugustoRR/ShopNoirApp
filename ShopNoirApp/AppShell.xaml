@@ -109,6 +109,12 @@
         FlyoutItemIsVisible="False"
         ContentTemplate="{DataTemplate login:Login}"
         Route="LoginPage" />
+    
+    <!--<ShellContent
+        Title="Register"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate login:Register}"
+        Route="RegisterPage" />-->
 
     <ShellContent
         Title="Home"

@@ -28,14 +28,21 @@ namespace ShopNoirApp.ViewModels
 
 
         public AsyncCommand Login { get; set; }
+        public AsyncCommand Register { get; set; }
 
 
         public LoginViewModel()
         {
             Login = new AsyncCommand(_Login);
+            Register = new AsyncCommand(_Register);
         }
 
 
+        public async Task _Register()
+        {
+            string route = "RegisterPage";
+            await Shell.Current.GoToAsync(route);
+        }
         public async Task _Login()
         {
             if (VerifyLogin())
